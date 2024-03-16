@@ -1,0 +1,69 @@
+<div class="content">
+  <div class="title">
+    Contato
+  </div>
+  <div class="forme-data-group" enctype="text/plain" autocomplete="on/off" >
+    <div class="inicial-credentials" style="display: flex; flex-direction: row; gap: 5px;">
+      <div>
+        <div class="input-forme">
+          <div class="text-label">Motivo:</div>
+        </div>
+        <div id="input-forme-name" class="input-forme" style="width: 485px;">
+          <select #tipo class="input-forme-data" name="Tipo" id="tipo">
+            <option value="QUAL O HORÁRIO DE FUNCIONAMENTO?">Qual o horário de funcionamento?</option>
+            <option value="O QUE É JUDAÍSMO MESSIÂNICO?">O que é judaísmo messiânico?</option>
+            <option value="RECLAMAÇÕES!">Reclamações!</option>
+            <option value="PROBLEMAS PESSOAIS">Problemas Pessoais</option>
+            <option value="SUGESTÕES">Sugestões</option>
+            <option value="OUTRAS QUESTÕES">Outras Questões</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <div class="input-forme">
+          <div class="text-label">Status:</div>
+        </div>
+        <div id="input-forme-name" class="input-forme" style="width: 180px;">
+          <select #status class="input-forme-data" name="Status" id="status">
+            <option value="' '">...</option>
+            <option value="VISITANTE">Visitante</option>
+            <option value="CONVIDADO">Convidado</option>
+            <option value="MEMBRO">Membro</option>
+            <option value="'OUTRO'">Outro</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="input-forme"  style="margin-top: 10px;">
+      <div class="text-label">Nome:</div>
+    </div>
+    <div id="input-forme-name" class="input-forme">
+      <input #name class="input-forme-data" placeholder="Preencha seu nome" id="name" type="text" name="Name">
+    </div>
+    <div class="input-forme" style="margin-top: 10px;">
+      <div class="text-label">Email:</div>
+    </div>
+    <div class="input-forme">
+      <input #email class="input-forme-data" placeholder="Preencha seu email" id="email" type="text" name="Email">
+    </div>
+    <div class="input-forme"  style="margin-top: 10px;">
+      <div class="text-label">Telefone:</div>
+    </div>
+    <div class="input-forme">
+      <input #phone class="input-forme-data" placeholder="Preencha seu telefone" id="phone" type="text" name="Phone">
+    </div>
+    <div class="input-forme" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px; margin-top: 20px;">
+      <div class="text-label">Mensagem</div>
+    </div>
+    <div class="input-forme">
+      <textarea #message class="input-forme-data" placeholder="Escreva a sua mensagem..." name="Message" id="message" cols="30" rows="10"></textarea>
+    </div>
+    <div id="input-forme-submit" class="input-forme">
+      <input (click)="enviar()" id="submit" class="input-forme-submit" type="submit" name="submit" value="Enviar">
+    </div>
+  </div>
+
+</div>

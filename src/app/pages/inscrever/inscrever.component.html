@@ -1,0 +1,93 @@
+<div class="content">
+  <div class="title">
+    Inscrição
+  </div>
+  <div class="forme-data-group" enctype="text/plain" autocomplete="on/off" >
+    <div class="inicial-credentials" style="display: flex; flex-direction: row; gap: 50px;">
+      <div>
+        <div class="input-forme">
+          <div class="text-label">Inscrição:</div>
+        </div>
+        <div id="input-forme-name" class="input-forme">
+          <select #tipo class="input-forme-data" name="Tipo" id="tipo">
+            <option value="PARASHAT">Parashat</option>
+            <option value="ESTUDO BÍBLICO">Estudo Bíblico</option>
+            <option value="AULA DE HEBRAICO">Aula de Hebraico</option>
+            <option value="SHUIR">Shuir</option>
+            <option value="CHANUCÁ">Chanucá</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="input-forme">
+          <div class="text-label">Data:</div>
+        </div>
+        <div id="input-forme-name" class="input-forme" style="width: 180px;">
+          <input type="date" #calendar class="input-forme-data" name="Calendar" id="calendar">
+        </div>
+      </div>
+
+      <div>
+        <div class="input-forme">
+          <div class="text-label">Status:</div>
+        </div>
+        <div id="input-forme-name" class="input-forme" style="width: 180px;">
+          <select #status class="input-forme-data" name="Status" id="status">
+            <option value="' '">...</option>
+            <option value="VISITANTE">Visitante</option>
+            <option value="CONVIDADO">Convidado</option>
+            <option value="MEMBRO">Membro</option>
+            <option value="'OUTRO'">Outro</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="input-forme"  style="margin-top: 10px;">
+      <div class="text-label">Nome:</div>
+    </div>
+    <div id="input-forme-name" class="input-forme">
+      <input #name class="input-forme-data" placeholder="Preencha seu nome" id="name" type="text" name="Name">
+    </div>
+    <div class="input-forme" style="margin-top: 10px;">
+      <div class="text-label">Email:</div>
+    </div>
+    <div class="input-forme">
+      <input #email class="input-forme-data" placeholder="Preencha seu email" id="email" type="text" name="Email">
+    </div>
+    <div class="input-forme"  style="margin-top: 10px;">
+      <div class="text-label">Telefone:</div>
+    </div>
+    <div class="input-forme">
+      <input #phone class="input-forme-data" placeholder="Preencha seu telefone" id="phone" type="text" name="Phone">
+    </div>
+    <div class="input-forme" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px; margin-top: 10px;">
+      <div class="text-label">Trouxe convidados?</div>
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px; margin-top: 10px;">
+      <div>
+        <div>
+          Sim
+        </div>
+        <input (click)="this.setConvidados(false)" type="radio" id="convidados" name="convidados" value="Sim">
+      </div>
+      <div>
+        <div>
+          Não
+        </div>
+        <input (click)="this.setConvidados(true)" type="radio" id="convidados" name="convidados" value="Não">
+      </div>
+    </div>
+    <div *ngIf="this.convidados!=true" class="input-forme" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px; margin-top: 10px;">
+      <div class="text-label">Quais são?</div>
+    </div>
+    <div *ngIf="this.convidados!=true" class="input-forme">
+      <textarea #message class="input-forme-data" placeholder="Escreva o nome dos convidados" name="Message" id="message" cols="30" rows="10"></textarea>
+    </div>
+    <div id="input-forme-submit" class="input-forme">
+      <input (click)="enviar()" id="submit" class="input-forme-submit" type="submit" name="submit" value="Enviar">
+    </div>
+  </div>
+
+</div>

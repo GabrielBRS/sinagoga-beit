@@ -1,0 +1,11 @@
+.footer{
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  height: 80px;
+  background-color: black;
+  border-bottom: 1px solid navy;
+  margin-bottom: 20px;
+  justify-content: end;
+  align-self: flex-end;
+}

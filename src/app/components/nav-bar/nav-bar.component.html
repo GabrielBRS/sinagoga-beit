@@ -1,0 +1,57 @@
+<div class="nav-bar">
+  <div class="logo">
+    <a routerLink="/">Beit Tefilah</a>
+  </div>
+  <div class="toolbar">
+    <div class="toolbar-flex">
+      <div (click)="functionShowQuemSomos(true)" class="no-show">
+        <div>Quem Somos</div>
+        <div class="icon-click" >
+          <div class="img-no" *ngIf="showQuemSomos!=true">&rarrhk;</div>
+          <div class="img-yes" *ngIf="showQuemSomos!=false">&rarrhk;</div>
+        </div>
+      </div>
+      <div *ngIf="showQuemSomos!=false" class="position-fixed" (mouseleave)="functionShowQuemSomos(false)">
+        <a routerLink="/quem-somos">Quem somos</a>
+        <a routerLink="/quem-somos/projeto-restauracao">Projeto Restauração</a>
+      </div>
+    </div>
+    <a routerLink="/sinagoga-beit-tefilah">Kahal Beit Tefilah</a>
+    <div class="toolbar-flex">
+      <div (click)="functionShowParashot(true)" class="no-show">
+        <div>Parashot</div>
+        <div class="icon-click" >
+          <div class="img-no" *ngIf="showParashot!=true">&rarrhk;</div>
+          <div class="img-yes" *ngIf="showParashot!=false">&rarrhk;</div>
+        </div>
+      </div>
+      <div *ngIf="showParashot!=false" class="position-fixed" (mouseleave)="functionShowParashot(false)">
+        <a routerLink="/parashot">Parashot</a>
+        <a routerLink="/parashot/online">Parashot Online</a>
+        <a routerLink="/parashot/calendario">Parashot Calendário</a>
+      </div>
+    </div>
+    <a routerLink="/editora">Editora</a>
+    <a routerLink="/contribua">Contribua</a>
+    <a routerLink="/yeshiva">Yeshivá</a>
+    <div class="toolbar-flex">
+      <div (click)="functionShowFestas(true)" class="no-show">
+        <div>Festas</div>
+        <div class="icon-click" >
+          <div class="img-no" *ngIf="showFestas!=true">&rarrhk;</div>
+          <div class="img-yes" *ngIf="showFestas!=false">&rarrhk;</div>
+        </div>
+      </div>
+      <div *ngIf="showFestas!=false" class="position-fixed" (mouseleave)="functionShowFestas(false)">
+        <a routerLink="/festas">Festas</a>
+        <a routerLink="/festas/calendario">Festas Calendário</a>
+        <a routerLink="/festas/rosh-chodesh">Rosh Chodesh</a>
+      </div>
+    </div>
+    <a routerLink="/contato">Contato</a>
+  </div>
+  <div class="login">
+    <a routerLink="/inscrever">Inscrever</a>
+    <a routerLink="/entrar">Entrar</a>
+  </div>
+</div>
