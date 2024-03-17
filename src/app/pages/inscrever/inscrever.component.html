@@ -1,6 +1,11 @@
 <div class="content">
-  <div class="title">
-    Inscrição
+  <div class="texto">
+    <div class="title">
+      Inscrição
+    </div>
+    <div class="title">
+      הַרשָׁמָה
+    </div>
   </div>
   <div class="forme-data-group" enctype="text/plain" autocomplete="on/off" >
     <div class="inicial-credentials" style="display: flex; flex-direction: row; gap: 50px;">
@@ -67,13 +72,13 @@
     </div>
     <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px; margin-top: 10px;">
       <div>
-        <div>
+        <div style="font-weight: bolder; color: #03254c;">
           Sim
         </div>
         <input (click)="this.setConvidados(false)" type="radio" id="convidados" name="convidados" value="Sim">
       </div>
       <div>
-        <div>
+        <div style="font-weight: bolder; color: #03254c;">
           Não
         </div>
         <input (click)="this.setConvidados(true)" type="radio" id="convidados" name="convidados" value="Não">
