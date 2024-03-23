@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { OnlineComponent } from './online.component';
+import { ShuirComponent } from './shuir.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule
   ],
-  declarations: [OnlineComponent],
-  exports:[OnlineComponent]
+  declarations: [ShuirComponent],
+  exports:[ShuirComponent]
 })
-export class OnlineModule { }
+export class ShuirModule { }

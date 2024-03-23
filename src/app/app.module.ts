@@ -16,6 +16,12 @@ import { InscreverModule } from './pages/inscrever/inscrever.module';
 import { YeshivaModule } from './pages/yeshiva/yeshiva.module';
 import { ContatoModule } from './pages/contato/contato.module';
 import { EntrarModule } from './pages/entrar/entrar.module';
+import { UsersModule } from './pages/users/users.module';
+import { NavBaUserModule } from './components/nav-bar-user/nav-bar-user.module';
+import { LoginService } from './pages/entrar/login.service';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
+import { UsersService } from './pages/users/users.service';
+import { DadosCadastroModule } from './pages/users/dados-cadastro/dados-cadastro.module';
 
 @NgModule({
   declarations: [
@@ -37,9 +43,20 @@ import { EntrarModule } from './pages/entrar/entrar.module';
     YeshivaModule,
     ContatoModule,
     EntrarModule,
+    UsersModule,
+    NavBaUserModule,
+    DadosCadastroModule,
+
+    HttpClientModule,
 
   ],
-  providers: [],
+  providers: [ HttpClientModule, LoginService, UsersService
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: null,
+    //   multi: true
+    // },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
