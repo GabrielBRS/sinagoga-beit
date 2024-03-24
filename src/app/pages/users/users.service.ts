@@ -12,13 +12,13 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class UsersService {
 
-  apiURL: string = environment.apiURLBase
+  // apiURL: string = environment.apiURLBase
   // apiURL: string = environment.apiURLBase + "/api/usuarios"
-  tokenURL: string = environment.apiURLBase + environment.obterTokenUrl
-  clientID: string = environment.clientId;
-  clientSecret: string = environment.clientSecret;
-  jwtHelper: JwtHelperService = new JwtHelperService();
-  setUserAttributes:User = new User();
+  // tokenURL: string = environment.apiURLBase + environment.obterTokenUrl
+  // clientID: string = environment.clientId;
+  // clientSecret: string = environment.clientSecret;
+  // jwtHelper: JwtHelperService = new JwtHelperService();
+  // setUserAttributes:User = new User();
 
   constructor(private http: HttpClient, private route:Router) { }
 
