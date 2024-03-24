@@ -31,7 +31,7 @@ export class EntrarComponent implements OnInit {
     ) { }
 
   ngOnInit():void {
-    this.cleanToken()
+    // this.cleanToken();
   }
 
   logar(email:any, password:any){
@@ -52,28 +52,28 @@ export class EntrarComponent implements OnInit {
     }
   }
 
-  async onSubmit() {
-    const crendentials = this.loginForm.value;
+  // async onSubmit() {
+  //   const crendentials = this.loginForm.value;
 
-    this.loginService
-      .login(crendentials)
-      .subscribe(response => {
-        const token:any = response.headers.get("authorization");
-        const tokenString = JSON.stringify(token);
-        const access_token:any = tokenString.slice(7);
+  //   this.loginService
+  //     .login(crendentials)
+  //     .subscribe(response => {
+  //       const token:any = response.headers.get("authorization");
+  //       const tokenString = JSON.stringify(token);
+  //       const access_token:any = tokenString.slice(7);
 
-        localStorage.setItem('access_token', access_token);
-        this.router.navigateByUrl('/initializing');
-      })
-  }
+  //       localStorage.setItem('access_token', access_token);
+  //       this.router.navigateByUrl('/initializing');
+  //     })
+  // }
 
   changeShowLogin(changeShowForm:boolean){
     this.showForm = changeShowForm;
   }
 
-  cleanToken(){
-    this.loginService.endSession();
-  }
+  // cleanToken(){
+  //   this.loginService.endSession();
+  // }
 
   logartest(test?:any){
     this.loginService.logarTesteS('http://localhost:8080/api/membros/1');

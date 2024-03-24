@@ -26,7 +26,8 @@
           <div class="welcome">Bem Vindo</div>
           <div class="text">Desejamos uma ótima experiência</div>
        </div>
-       <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+       <!-- <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
+        <form  [formGroup]="loginForm">
         <div class="form-email">
           <div class="email-label">Email: </div>
           <input type="email" formControlName="email" id="email" autocomplete="email" #email>
